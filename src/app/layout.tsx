@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ziko_Notion" }],
   creator: "Ziko_Notion",
+  icons: {
+    icon: "/templates/notion.png",
+    shortcut: "/templates/notion.png",
+    apple: "/templates/notion.png",
+  },
   openGraph: {
     title: "Ziko_Notion - Professional Notion Templates & Workspaces",
     description:
