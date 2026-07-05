@@ -13,33 +13,67 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ziko-notion.vercel.app"),
   title: {
-    default: "Ziko_Notion - Professional Notion Templates & Workspaces",
-    template: "%s | Ziko_Notion",
+    default: "Ziko Notion | Premium Notion Templates for Businesses",
+    template: "%s | Ziko Notion",
   },
   description:
-    "Premium Notion templates and custom workspaces for businesses, creators, agencies, investors, consultants, and operators.",
+    "Ziko Notion creates professional Notion templates and business operating systems for agencies, investors, consultants, creators, and modern businesses.",
   keywords: [
+    "Ziko Notion",
+    "Ziko_Notion",
     "Notion templates",
+    "business Notion templates",
+    "premium Notion templates",
     "Notion systems",
     "Notion workspace",
-    "business operations",
-    "Ziko_Notion",
+    "Notion marketplace",
   ],
-  authors: [{ name: "Ziko_Notion" }],
-  creator: "Ziko_Notion",
+  authors: [{ name: "Ziko Notion" }],
+  creator: "Ziko Notion",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/templates/notion.png",
     shortcut: "/templates/notion.png",
     apple: "/templates/notion.png",
   },
   openGraph: {
-    title: "Ziko_Notion - Professional Notion Templates & Workspaces",
+    title: "Ziko Notion | Premium Notion Templates for Businesses",
     description:
-      "Premium Notion templates and custom workspaces for businesses, creators, agencies, investors, consultants, and operators.",
-    url: "https://zikonotion.com",
-    siteName: "Ziko_Notion",
+      "Ziko Notion creates professional Notion templates and business operating systems for agencies, investors, consultants, creators, and modern businesses.",
+    url: "https://ziko-notion.vercel.app",
+    siteName: "Ziko Notion",
+    images: [
+      {
+        url: "/templates/notion.png",
+        width: 512,
+        height: 512,
+        alt: "Ziko Notion",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Ziko Notion | Premium Notion Templates for Businesses",
+    description:
+      "Ziko Notion creates professional Notion templates and business operating systems for agencies, investors, consultants, creators, and modern businesses.",
+    images: ["/templates/notion.png"],
   },
 };
 
