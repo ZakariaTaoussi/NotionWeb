@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ziko_Notion
 
-## Getting Started
+Professional Notion creator website built with Next.js App Router, TypeScript,
+Tailwind CSS, and Motion.
 
-First, run the development server:
+## Install
+
+```bash
+npm install
+```
+
+## Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Edit template data
 
-To learn more about Next.js, take a look at the following resources:
+All marketplace products live in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```txt
+src/data/templates.ts
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Update each product's `title`, `category`, `description`, `price`, `image`,
+`link`, and `featured` fields there. The `link` field is already separated so
+each product can later point to its own marketplace page.
 
-## Deploy on Vercel
+## Replace template images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Template thumbnails are loaded from:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```txt
+public/templates
+```
+
+Each card displays a 200x200 thumbnail with `object-fit: cover`. Replace the
+placeholder PNG files with real images using the same filenames from
+`src/data/templates.ts`, or update the `image` value in the data file.
+
+If an image is missing, the card shows a styled fallback so the marketplace
+still looks polished.
+
+## Add customer review screenshots
+
+Put Notion Marketplace review screenshots in:
+
+```txt
+public/reviews
+```
+
+Use these filenames:
+
+```txt
+notion-marketplace-review-1.png
+notion-marketplace-review-2.png
+notion-marketplace-review-3.png
+```
+
+The reviews section shows a polished fallback until those screenshots exist.
+
+## Deploy to Vercel
+
+1. Push this project to a Git repository.
+2. Import the repository in Vercel.
+3. Keep the default Next.js settings.
+4. Deploy.
+
+This version has no backend, database, authentication, or payments.
